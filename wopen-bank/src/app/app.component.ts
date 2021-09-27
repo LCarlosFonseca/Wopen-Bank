@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog'
+import {MatDialog} from '@angular/material/dialog';
+
 
 
 @Component({
@@ -11,7 +12,7 @@ import {MatDialog} from '@angular/material/dialog'
 export class AppComponent{
   title = 'app';
 
-  constructor(public dialog: MatDialog){
+  constructor(public dialog: MatDialog) {
 
   }
   openDialog() {
@@ -19,8 +20,10 @@ export class AppComponent{
       height: '350px'
     });
 
-    dialogRef.afterClosed().subscribe((result: any) => {
-      console.log('Dialog result: ${result}');
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
-}
+
+  }
+  
