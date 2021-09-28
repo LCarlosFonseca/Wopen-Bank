@@ -1,9 +1,24 @@
-<body>
+
   <h1>Wopen Bank</h1>
 
   <!--Botão para disparar o event bind do Angular-->
-  
+
+  <!--Corrigir erro de me botão!-->
   <button mat-button (click) = "openDialog()">Open Dialog</button>  
 
-</body>
-  
+  <div class="container">
+    <div class="row">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+    </div>
+  </div>
+
+<!--Adicionando elementos do header-->
+
+<div class="wrapper-content">
+  <div class="box-tile">
+  <h1><b class="tag">#</b>Wopen Bank o banco livre pra você</h1>
+  </div>
+  <div class="bg_img"></div>
+  </div>

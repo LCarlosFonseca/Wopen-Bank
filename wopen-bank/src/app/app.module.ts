@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component'
     HeaderComponent,
     ContentComponent,
     FooterComponent,
-    MatDialogModule
+    
   ],
   imports: [
     BrowserModule,
@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component'
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [
     MatDialogModule
   ]
