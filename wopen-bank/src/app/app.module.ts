@@ -8,7 +8,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component'
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FooterComponent } from './footer/footer.component'
     HeaderComponent,
     ContentComponent,
     FooterComponent,
+    CadastroClientesComponent,
     
   ],
   imports: [
