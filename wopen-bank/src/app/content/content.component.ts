@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 //resolver problema de importação 
 import Typed from 'typed.js';
@@ -10,7 +11,7 @@ import Typed from 'typed.js';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     const options = {
@@ -35,5 +36,9 @@ export class ContentComponent implements OnInit {
     };
 
     const typed = new Typed ('.typing-element',options);
+  }
+  //insere o método de levar para a página clientes
+  gotoCadastroClientes() {
+    this.router.navigate(['cadastro-clientes'])
   }
 }
