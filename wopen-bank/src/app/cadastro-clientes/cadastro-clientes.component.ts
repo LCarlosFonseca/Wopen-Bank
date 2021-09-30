@@ -8,6 +8,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class CadastroClientesComponent implements OnInit {
   formCadastro: any;
+  conversao: string | undefined;
+  valoresForm: any;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -19,7 +21,10 @@ export class CadastroClientesComponent implements OnInit {
     endereço: []
   });
   }
+  //convertendo dados recebidos em string e salvando no local storage do navegador
   cadastro() {
-
+    this.conversao = JSON.stringify(this.valoresForm);
+    console.log(this.conversao);
+    localStorage.setItem('cadastro',this.conversao)
   }
 }

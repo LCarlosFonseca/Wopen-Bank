@@ -1,15 +1,20 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
-import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component'
+import { AppRoutingModule } from './app-routing.module';
+import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeLogadaComponent } from './home-logada/home-logada.component'
+import  {AuthGuard} from 'auth.guard'
+import { AuthService } from "auth.service";
+import { MaterialModules } from "./app.material.module";
+import { LoginComponent } from './login/login.component';
+import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,9 @@ import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes
     ContentComponent,
     FooterComponent,
     CadastroClientesComponent,
+    HomeLogadaComponent,
+    LoginComponent,
+    CadastroConcluidoComponent,
     
   ],
   imports: [
@@ -25,13 +33,17 @@ import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthGuard,
+    AuthService,
+    MaterialModules
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [
     MatDialogModule
+    
   ]
 })
 export class AppModule { }
